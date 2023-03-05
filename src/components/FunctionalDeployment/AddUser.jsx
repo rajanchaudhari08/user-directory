@@ -1,7 +1,7 @@
 import Card from "../UserInterface/Card";
 import styles from "../FunctionalDeployment/AddUser.module.css";
 import Button from "../UserInterface/Button";
-import { useState } from "react";
+import { useState, Fragment } from "react";
 import ErrorModal from "../UserInterface/ErrorModal";
 
 const AddUser = (properties) => {
@@ -42,7 +42,7 @@ const AddUser = (properties) => {
   };
 
   return (
-    <div>
+    <Fragment>
       {error && (
         <ErrorModal
           title={error.title}
@@ -69,7 +69,7 @@ const AddUser = (properties) => {
           <Button type="submit">Add User</Button>
         </form>
       </Card>
-    </div>
+    </Fragment>
   );
 };
 

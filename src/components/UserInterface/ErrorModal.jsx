@@ -1,9 +1,10 @@
 import Card from "../UserInterface/Card";
 import Button from "./Button";
 import styles from "./ErrorModal.module.css";
+import { Fragment } from "react";
 const ErrorModal = (properties) => {
   return (
-    <div>
+    <Fragment>
       <div className={styles.backdrop} onClick={properties.onConfirm} />
       <Card className={styles.modal}>
         <header className={styles.header}>
@@ -16,7 +17,7 @@ const ErrorModal = (properties) => {
           <Button onClick={properties.onConfirm}>Ok</Button>
         </footer>
       </Card>
-    </div>
+    </Fragment>
   );
 };
 
